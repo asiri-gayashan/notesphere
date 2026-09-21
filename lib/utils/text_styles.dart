@@ -13,17 +13,6 @@ class AppTextStyles {
     fontWeight: FontWeight.w500,
   );
   
-  static const TextStyle description = TextStyle(
-    fontSize: 20,
-    color: Colors.white,
-    fontWeight: FontWeight.w400,
-  );
-  
-  static const TextStyle descriptionSmall = TextStyle(
-    fontSize: 14,
-    color: Colors.white,
-    fontWeight: FontWeight.w400,
-  );
   
   
   static const TextStyle appbtn = TextStyle(
