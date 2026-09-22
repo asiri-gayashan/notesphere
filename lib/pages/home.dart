@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:notesphere/utils/constants.dart';
+import 'package:notesphere/utils/router.dart';
 import 'package:notesphere/utils/text_styles.dart';
 import 'package:notesphere/widgets/notes_todo_cards.dart';
 import 'package:notesphere/widgets/progress_card.dart';
@@ -29,8 +30,26 @@ class _HomePageState extends State<HomePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                NotesToDoCards(title: "Notes", description: "3 Notes", icon: Icons.bookmark),
-                NotesToDoCards(title: "To-Do List", description: "3 Tasks", icon: Icons.today_outlined),
+                GestureDetector(
+                  onTap: () {
+                    AppRouter.router.push("/notes");
+                  },
+                  child: NotesToDoCards(
+                    title: "Notes",
+                    description: "3 Notes",
+                    icon: Icons.bookmark,
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    AppRouter.router.push("/todo");
+                  },
+                  child: NotesToDoCards(
+                    title: "To-Do List",
+                    description: "3 Tasks",
+                    icon: Icons.today_outlined,
+                  ),
+                ),
               ],
             ),
             SizedBox(height: AppConstants.kdefaltPadding),
@@ -38,12 +57,10 @@ class _HomePageState extends State<HomePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("Todays Tasks", style: AppTextStyles.subTitle,),
-                Text("See All", style: AppTextStyles.appbtn,),
+                Text("Todays Tasks", style: AppTextStyles.subTitle),
+                Text("See All", style: AppTextStyles.appbtn),
               ],
-            )
-
-
+            ),
           ],
         ),
       ),
