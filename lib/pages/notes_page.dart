@@ -25,7 +25,13 @@ class _NotePageState extends State<NotePage> {
         ),
       ),
 
-      
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(100)),
+        ),
+        child: Icon(Icons.add, color: AppColors.WhiteColor),
+      ),
 
       body: const Padding(padding: const EdgeInsets.all(AppConstants.kdefaltPadding),
       child: Column(
