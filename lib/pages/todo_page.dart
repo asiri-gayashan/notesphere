@@ -8,3 +8,13 @@ class ToDoPage extends StatefulWidget {
   State<ToDoPage> createState() => _ToDoPageState();
 }
 
+class _ToDoPageState extends State<ToDoPage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Todo Page", style: AppTextStyles.subTitle,),
+      ),
+    );
+  }
+}
